@@ -18,7 +18,7 @@ public class Packer {
       //  packer.repackage( stringBox,foodBox); // ошибка компеляции
     }
 
-    public <T> void repackage(Box<? super T> to, Box< ? extends T> from) {
+    public <T extends Goods> void repackage(Box<? super T> to, Box< ? extends T> from) {
         repackageAdd(to , repackageGet(from));
     }
 
